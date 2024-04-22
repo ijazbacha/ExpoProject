@@ -1,14 +1,11 @@
-import { View, Text } from "react-native";
+import { Stack } from "expo-router";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <View>
-        <Text>App</Text>
-      </View>
-    </SafeAreaView>
+      <Stack>
+        <Stack.Screen name="index"  options={{headerShown:false}} />
+      </Stack>
   );
 };
 
