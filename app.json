@@ -4,6 +4,7 @@
     "slug": "ExpoProject",
     "scheme": "your-app-scheme",
     "version": "1.0.0",
+    "newArchEnabled": true,
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
