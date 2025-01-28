@@ -1,4 +1,4 @@
-import { View, Text, Image } from "react-native";
+import { View, Text, Image, Platform } from "react-native";
 import React from "react";
 import { Tabs } from "expo-router";
 import icons from "../../constants/icons";
@@ -15,7 +15,7 @@ const TabIcon = ({ name, icon, color, focused, size }) => {
 const TabsLayout = () => {
   return (
     <>
-      <Tabs screenOptions={{tabBarShowLabel:false, tabBarStyle:{ height: 70}}} >
+      <Tabs screenOptions={{tabBarShowLabel:false, tabBarStyle:{ height: Platform.OS == 'ios' ? 80 : 70}}} >
         <Tabs.Screen
           name="home"
           options={{
