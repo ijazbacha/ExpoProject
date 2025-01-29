@@ -6,8 +6,8 @@ import icons from "../../constants/icons";
 const TabIcon = ({ name, icon, color, focused, size }) => {
   return (
     <View className={`items-center justify-center gap-2 w-20 mt-5`}>
-      <Image source={icon} className={`w-6 h-6`} tintColor={color} resizeMode="contain" />
-      <Text className={`${focused ? "font-psemibold" : "font-pregular"} text-xs`}>{name}</Text>
+      <Image source={icon} className={`w-6 h-6 mr-1`} tintColor={color} resizeMode="contain" />
+      <Text className={`${focused ? "font-psemibold" : "font-pregular"} text-xs`} style={{ color:color}}>{name}</Text>
     </View>
   );
 };
@@ -15,7 +15,17 @@ const TabIcon = ({ name, icon, color, focused, size }) => {
 const TabsLayout = () => {
   return (
     <>
-      <Tabs screenOptions={{tabBarShowLabel:false, tabBarStyle:{ height: Platform.OS == 'ios' ? 80 : 70}}} >
+      <Tabs screenOptions={{
+        tabBarShowLabel:false,
+        tabBarActiveTintColor:"#FFA001",
+        tabBarInactiveTintColor:"#CDCDE0",
+        tabBarStyle:{ 
+          height: Platform.OS == 'ios' ? 80 : 70,
+          backgroundColor:"#161622",
+          borderTopWidth:1,
+          borderTopColor:"#232533"
+        }
+        }}>
         <Tabs.Screen
           name="home"
           options={{
@@ -47,6 +57,21 @@ const TabsLayout = () => {
           }}
         />
         <Tabs.Screen
+          name="create"
+          options={{
+            title: "Create",
+            headerShown: false,
+            tabBarIcon: ({ color, focused }) => (
+              <TabIcon
+                name="Create"
+                icon={icons.plus}
+                color={color}
+                focused={focused}
+              />
+            ),
+          }}
+        />
+        <Tabs.Screen
           name="profile"
           options={{
             title: "Profile",
@@ -62,22 +87,6 @@ const TabsLayout = () => {
             ),
           }}
         />
-        <Tabs.Screen
-          name="create"
-          options={{
-            title: "Create",
-            headerShown: false,
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-                name="Create"
-                icon={icons.plus}
-                color={color}
-                focused={focused}
-              />
-            ),
-          }}
-        />
-        
       </Tabs>
     </>
   );
