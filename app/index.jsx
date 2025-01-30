@@ -3,6 +3,8 @@ import React from 'react'
 import { Link } from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import images from '../constants/images'
+import CustomButton from '../components/CustomButton'
+import { StatusBar } from 'expo-status-bar'
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
           <Image source={images.path} className="w-[136px] h-[15px] absolute -bottom-2 -right-8" resizeMode='contain' />
           </View>
           <Text className='mt-7 text-gray-100 text-sm font-pregular text-center'>Where creativity meets innovation: embark on a journey of limitless exploration with Aora</Text>
+          <CustomButton title={"Continue With Email"} handlePress={() =>{}} containerStyle={"w-full mt-7"} />
+            <StatusBar backgroundColor='#161622' style='light' />
         </View>
       </ScrollView>
     </SafeAreaView>
