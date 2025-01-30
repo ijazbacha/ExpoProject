@@ -14,8 +14,8 @@ const App = () => {
           <Image source={images.logo} className="w-[134px] h-[84px]" resizeMode='contain' />
           <Image source={images.cards} className="w-m-[380px] w-full h-[300px]" resizeMode='contain' />
           <View className="relative mt-5">
-            <Text className="text-3xl text-white font-bold text-center">Discover Endless Possibilities With <Text className="text-secondary-200">Aora</Text></Text>
-          <Image source={images.path} className="w-[136px] h-[15px] absolute -bottom-2 -right-8" resizeMode='contain' />
+            <Text className="text-3xl text-white font-pbold text-center z-10">Discover Endless Possibilities With <Text className="text-secondary-200">Aora</Text></Text>
+          <Image source={images.path} className="w-[136px] h-[15px] absolute -bottom-0.5 -right-7" resizeMode='contain' />
           </View>
           <Text className='mt-7 text-gray-100 text-sm font-pregular text-center'>Where creativity meets innovation: embark on a journey of limitless exploration with Aora</Text>
           <CustomButton title={"Continue With Email"} handlePress={() =>{}} containerStyle={"w-full mt-7"} />
