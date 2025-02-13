@@ -22,6 +22,7 @@ const FormField = ({
         value={value}
         onChangeText={handleChangeText}
         secureTextEntry={title === "Password" && !showPassword}
+        {...props}
         />
         {
           title === "Password" &&
